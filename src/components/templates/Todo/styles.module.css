@@ -1,0 +1,7 @@
+.container {
+  background-color: aliceblue;
+  padding: 5px;
+  border-radius: 6px;
+  flex-direction: column;
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
+}

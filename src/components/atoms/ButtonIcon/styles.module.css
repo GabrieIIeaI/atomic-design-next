@@ -1,0 +1,16 @@
+.button {
+  background-color: blueviolet;
+  border-radius: 5px;
+  border-style: none;
+  color: white;
+  min-width: 40px;
+  min-height: 35px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: rgb(125, 37, 207);
+  }
+}
