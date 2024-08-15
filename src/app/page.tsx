@@ -1,9 +1,9 @@
-import Image from "next/image";
+import React from 'react'
 
 export default function Home() {
   return (
     <main>
-      <p>bora nois dddfi dsadsadasd</p>
+      <p>Projeto 1</p>
     </main>
-  );
+  )
 }
