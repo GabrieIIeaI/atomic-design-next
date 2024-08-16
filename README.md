@@ -114,10 +114,6 @@ If Docker is not available or you prefer not to use it, you can run the project 
 
    `npm run dev`
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - [ESLint](https://eslint.org/)
