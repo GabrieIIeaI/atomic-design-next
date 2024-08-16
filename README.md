@@ -58,7 +58,7 @@ If Docker is not available or you prefer not to use it, you can run the project 
 
 1. **Clone the Repository**
 
-   `git clone https://github.com/yourusername/your-repo.git`
+   `git clone https://github.com/GabrieIIeaI/atomic-design-next.git`
 
    `cd your-repo`
 
