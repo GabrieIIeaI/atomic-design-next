@@ -2,6 +2,10 @@
 
 This guide provides instructions on how to run the project using Docker and Docker Compose, as well as how to run it without Docker.
 
+## Overview
+
+This project follows the Atomic Design methodology for component-based architecture, ensuring a scalable and maintainable structure.
+
 ## Prerequisites
 
 - **Docker**: Ensure Docker is installed on your machine. [Install Docker](https://docs.docker.com/get-docker/)
@@ -110,14 +114,6 @@ If Docker is not available or you prefer not to use it, you can run the project 
 
    `npm run dev`
 
-## Contributing
-
-1. **Fork the Repository**
-2. **Create a New Branch**: `git checkout -b feature/your-feature`
-3. **Commit Your Changes**: `git commit -am 'Add some feature'`
-4. **Push to the Branch**: `git push origin feature/your-feature`
-5. **Create a Pull Request**
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -128,3 +124,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 - [Node.js](https://nodejs.org/)
+- **Atomic Design**: Used for component-based architecture in this project.
