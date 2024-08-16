@@ -16,7 +16,7 @@ This project follows the Atomic Design methodology for component-based architect
 
 1. **Clone the Repository**
 
-   `git clone https://github.com/yourusername/your-repo.git`
+   `git clone https://github.com/GabrieIIeaI/atomic-design-next.git`
 
    `cd your-repo`
 
