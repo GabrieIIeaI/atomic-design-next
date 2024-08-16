@@ -6,11 +6,13 @@ const FlatList = <TData,>({
   keyExtractor, 
   renderItem, 
   onPressItem 
-}: FlatListProps<TData>) => 
-    data.map((item, index) => 
-      <FlexColumn onClick={() => onPressItem?.(item)} key={keyExtractor(item)}>
-        {renderItem(item, index)}
-      </FlexColumn>
-    )
+}: FlatListProps<TData>) =>
+    <FlexColumn gap={20}>
+      {data.map((item, index) => 
+        <FlexColumn onClick={() => onPressItem?.(item)} key={keyExtractor(item)}>
+          {renderItem(item, index)}
+        </FlexColumn>
+      )}
+    </FlexColumn>
 
 export default FlatList

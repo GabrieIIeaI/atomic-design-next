@@ -1,16 +1,19 @@
+import styles from './styles.module.css'
 import { FlexLineProps } from './types'
-
-import './styles.css'
 
 const FlexLine = ({
   children,
-  gap = 10
+  gap = 10,
+  flexWrap = 'nowrap',
+  ...props
 }: FlexLineProps) => 
   <div 
-    className='container' 
+    className={styles.container} 
     style={{
-      gap: gap
+      gap: gap,
+      flexWrap: flexWrap
     }}
+    {...props}
   >
     {children}
   </div>

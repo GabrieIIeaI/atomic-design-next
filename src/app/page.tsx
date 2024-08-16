@@ -1,6 +1,6 @@
 'use client'
 
-import Card from '@/components/molecules/Card'
+import { ToDoCard } from '@/components/organisms'
 import { TodoTemplate } from '@/components/templates'
 import { useToDo } from '@/hooks/ToDo'
 
@@ -8,22 +8,37 @@ export default function Home() {
   const {
     toDo,
     toDoList,
+    pendingTasks,
     onChangeToDo,
-    addToDo
+    addToDo,
+    onPressClearAll,
+    onPressClearAllCompleted,
+    onPressSaveEdit,
+    onPressToogle
   } = useToDo()
 
   return (
     <main>
-      <TodoTemplate 
+      <TodoTemplate
+        description={`You have ${pendingTasks} pending tasks`}
         onPressAdd={addToDo}
+        onPressClearAll={onPressClearAll}
+        onPressClearAllCompleted={onPressClearAllCompleted}
         inputTask={{
           value: toDo,
           onChanceText: onChangeToDo
         }}
         listComponentProps={{
           data: toDoList,
-          renderItem: item => <Card description={item.description} />,
           keyExtractor: i => i.id,
+          renderItem: item => (
+            <ToDoCard 
+              completed={item.completed}
+              onPressCheckBox={onPressToogle(item)}
+              onPressSaveEdit={onPressSaveEdit(item.id)}
+              description={item.description}
+            />
+          ),
         }}
       />
     </main>

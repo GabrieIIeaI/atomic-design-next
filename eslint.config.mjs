@@ -9,20 +9,19 @@ export default tseslint.config(
   ...tseslint.configs.recommended,
   {
     plugins: {
-      import: eslintPluginImport, // Configura o plugin 'import'
+      import: eslintPluginImport,
     },
     rules: {
-      // Melhora a legibilidade e segurança do código
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }], // Evita variáveis não usadas, com exceção de variáveis prefixadas com _
-      '@typescript-eslint/no-explicit-any': ['warn', { ignoreRestArgs: true }], // Evita o uso de any, exceto para argumentos de rest
-      '@typescript-eslint/consistent-type-definitions': ['warn', 'interface'], // Usa interfaces em vez de tipos para declarações de tipos
-      'no-console': 'warn', // Evita o uso de console.log no código de produção
-      'eqeqeq': ['error', 'always'], // Requer o uso de === e !== em vez de == e !=
-      'no-var': 'error', // Requer o uso de let/const em vez de var
-      'prefer-const': 'warn', // Recomenda o uso de const para variáveis que não são reatribuídas
-      'quotes': ['error', 'single'], // Requer o uso de aspas simples para strings
-      'indent': ['error', 2], // Requer indentação com 2 espaços
-      'semi': ['error', 'never'], // Requer a ausência de ponto e vírgula no final das declarações
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': ['warn', { ignoreRestArgs: true }],
+      '@typescript-eslint/consistent-type-definitions': ['warn', 'interface'],
+      'no-console': 'warn',
+      'eqeqeq': ['error', 'always'],
+      'no-var': 'error',
+      'prefer-const': 'warn',
+      'quotes': ['error', 'single'],
+      'indent': ['error', 2],
+      'semi': ['error', 'never'],
       'import/order': [
         'error',
         {

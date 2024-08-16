@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { v4 as uuidv4 } from 'uuid'
 
-
 import { CreateToDoItemReducerStateProps, ToDoItemReducerStateProps } from './types'
 import { ReducerNames } from '../enums'
 
@@ -23,18 +22,26 @@ const ToDoSlice = createSlice({
       const toDo = state.find(todo => todo.id === payload.id)
       if(toDo) {
         toDo.description = payload.description
-        toDo.description = payload.description
       }
     },
     
+
     toDoToogle(state, { payload }: PayloadAction<Pick<ToDoItemReducerStateProps, 'id'>>) {
       const toDo = state.find(todo => todo.id === payload.id)
       if(toDo) {
         toDo.completed = !toDo.completed
       }
+    },
+
+    clearCompletedTasks(state) {
+      return state.filter(item => !item.completed)
+    },
+
+    reset() {
+      return initialState
     }
   }
 })
 
-export const { createToDo, editToDo, toDoToogle } = ToDoSlice.actions
+export const { createToDo, editToDo, toDoToogle, clearCompletedTasks, reset } = ToDoSlice.actions
 export default ToDoSlice.reducer

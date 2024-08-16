@@ -1,10 +1,11 @@
 import { ListComponentProps } from './types'
-import { FlatList, FlexColumn, Title } from '@/components/atoms'
+import { FlatList, FlexColumn, Scroll } from '@/components/atoms'
 
-const ListComponent = <TData,>({ title, ...flatListProps }: ListComponentProps<TData>) => 
+const ListComponent = <TData,>({ ...flatListProps }: ListComponentProps<TData>) => 
   <FlexColumn>
-    <Title title={title}/>
-    <FlatList {...flatListProps}/>
+    <Scroll>
+      <FlatList {...flatListProps}/>
+    </Scroll>
   </FlexColumn>
 
 export default ListComponent
